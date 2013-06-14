@@ -4,3 +4,5 @@ jdk:
 branches:
    only:
       - development
+install: gradle -q assemble 
+script: gradle -q check
