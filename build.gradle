@@ -1,0 +1,31 @@
+buildscript {
+   repositories {
+      maven {
+         url "https://repository-anzix.forge.cloudbees.com/snapshot"
+      }
+      mavenCentral()
+   }
+   dependencies {
+      classpath 'net.anzix.build:gradle-plugins:1.0-SNAPSHOT'
+   }
+}
+apply plugin: 'java'
+apply plugin: 'anzix-upload'
+
+repositories {
+   mavenCentral()
+}
+
+group = "net.anzix.repack"
+version = "1.2.1"
+
+sourceSets { 
+    main { 
+        java {
+            srcDir 'src'
+        }
+        resources {
+            srcDir 'src/resources'
+        }
+    }
+}
